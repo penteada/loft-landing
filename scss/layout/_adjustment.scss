@@ -1,0 +1,54 @@
+.section-scroll {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  color: $white;
+  z-index: 10;
+}
+
+.intro {
+  background-image: url('../img/bg_section-1.png');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+
+.header__logo {
+  background-image: url('../img/logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90px;
+  height: 75px;
+  margin-right: auto;
+}
+
+.menu__item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: $white;
+  &::after {
+    content: '●';
+    margin: 0 12px;
+  }
+  &:last-child::after {
+  display: none;
+  }
+}
+.menu__link {
+  font-family: 'ubuntu';
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: $white;
+
+}
+
+.block-header {
+  font-size: 4.5rem;
+  font-family: 'gagalin';
+}
