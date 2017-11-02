@@ -22,9 +22,8 @@
 .header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 0 0 0;
+  padding: 5px 0 0 0;
 }
 
 .section,
@@ -33,4 +32,9 @@
   background-color: #ccc;
   min-width: 940px;
   min-height: 650px;
+}
+.container-row {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
 }
