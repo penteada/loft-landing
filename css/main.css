@@ -1,37 +1,37 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'lifehack';
-  src: url("lifehack_medium-webfont.woff2") format("woff2"), url("lifehack_medium-webfont.woff") format("woff");
+  font-family: 'Lifehack-Medium';
+  src: url("../font/lifehack_medium-webfont.woff2") format("woff2"), url("../font/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'gagalin';
-  src: url("gagalin-regular-webfont.woff2") format("woff2"), url("gagalin-regular-webfont.woff") format("woff");
+  font-family: 'Gagalin-Regular';
+  src: url("../font/gagalin-regular-webfont.woff2") format("woff2"), url("../font/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'ubuntu';
-  src: url("ubuntu-b-webfont.woff2") format("woff2"), url("ubuntu-b-webfont.woff") format("woff");
-  font-weight: bold;
+  font-family: 'Ubuntu';
+  src: url("../font/ubuntu-b-webfont.woff2") format("woff2"), url("../font/ubuntu-b-webfont.woff") format("woff");
+  font-weight: 700;
   font-style: bold; }
 
 @font-face {
-  font-family: 'ubuntu';
-  src: url("ubuntu-light-webfont.woff2") format("woff2"), url("ubuntu-light-webfont.woff") format("woff");
-  font-weight: light;
+  font-family: 'Ubuntu';
+  src: url("../font/ubuntu-light-webfont.woff2") format("woff2"), url("../font/ubuntu-light-webfont.woff") format("woff");
+  font-weight: 300;
   font-style: light; }
 
 @font-face {
-  font-family: 'ubuntu';
-  src: url("ubuntu-medium-webfont.woff2") format("woff2"), url("ubuntu-medium-webfont.woff") format("woff");
-  font-weight: medium;
+  font-family: 'Ubuntu';
+  src: url("../font/ubuntu-medium-webfont.woff2") format("woff2"), url("../font/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: 500;
   font-style: medium; }
 
 @font-face {
   font-family: 'ubuntu';
-  src: url("ubuntu-regular-webfont.woff2") format("woff2"), url("ubuntu-regular-webfont.woff") format("woff");
+  src: url("../font/ubuntu-regular-webfont.woff2") format("woff2"), url("../font/ubuntu-regular-webfont.woff") format("woff");
   font-weight: regular;
   font-style: regular; }
 
@@ -52,9 +52,60 @@
   padding: 12px 18px;
   text-transform: uppercase; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style: none; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+footer {
+  position: relative;
+  width: 100%; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .wrapper {
+  position: relative;
   width: 100%;
-  height: 100%; }
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden; }
+
+.section {
+  min-height: 650px; }
+  .section_centered {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 .content {
   height: 100%;
@@ -70,9 +121,9 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -82,36 +133,27 @@
   -ms-flex-align: center;
   align-items: center; }
 
-.header {
+.header,
+.intro__content {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   padding: 5px 0 0 0; }
 
-.section,
-.intro {
-  height: 100%;
-  background-color: #ccc;
-  min-width: 940px;
-  min-height: 650px; }
-
-.container-row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  width: 100%; }
+.intro__burger,
+.intro__header {
+  width: 50%; }
 
 .intro {
   background-image: url("../img/bg_section-1.png");
@@ -121,9 +163,9 @@
   position: relative; }
 
 .header__logo {
-  background-image: url("../img/logo.svg");
+  /*  background-image: url('../img/logo.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   width: 90px;
   height: 75px;
   margin-right: auto; }
@@ -143,7 +185,7 @@
     display: none; }
 
 .menu__link {
-  font-family: 'ubuntu';
+  font-family: 'Ubuntu', Arial, sans-serif;
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
@@ -158,21 +200,44 @@
   background-repeat: no-repeat;
   background-size: cover; }
 
-.header__rightside {
-  width: 50%;
+.intro__slogan {
+  color: #f9b43b;
+  font-size: 4.5rem;
+  font-family: 'Gagalin-Regular', Arial, sans-serif; }
+
+.intro__descrip {
+  color: #fff;
+  font-family: 'Lifehack-Medium';
+  font-size: 4.06rem; }
+
+.header,
+.intro__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.intro__burger,
+.intro__header {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.intro__header {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end; }
-
-.header__rightside--orange {
-  color: #f9b43b;
-  font-size: 4.5rem;
-  font-family: 'gagalin'; }
-
-.intro__descrip {
-  color: #fff;
-  font-family: 'Lifehack';
-  font-size: 4.06rem; }
 
 /*# sourceMappingURL=main.css.map */

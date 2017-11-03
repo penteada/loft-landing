@@ -1,13 +1,18 @@
-// config
-@import "config/_variables";
-@import "config/_mixins";
+//COLORS
+$orange: #f9b43b;
+$white: #fff;
+$gray: #2f3234;
+$redorange: #e35028;
 
+// config
+@import "config/mixins";
+@import "config/font";
 // base
-@import "layout/_font";
-@import "layout/_adjustment";
-@import "layout/_grid";
+
+@import "layout/adjustment";
+@import "layout/grid";
 
 
 //section
-@import "section/_intro";
-@import "section/_best";
+@import "section/intro";
+@import "section/best";

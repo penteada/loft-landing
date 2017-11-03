@@ -1,0 +1,24 @@
+
+@mixin gagalin() {
+	font-family: 'Gagalin-Regular', Arial, sans-serif;
+}
+
+@mixin ubuntu($style: light) {
+	font-family: 'Ubuntu', Arial, sans-serif;
+
+	@if $style == light {
+		font-weight: 300;
+	}
+
+	@if $style == medium {
+		font-weight: 500;
+	}
+
+	@if $style == bold {
+		font-weight: 700;
+	}
+}
+
+@mixin lifehack() {
+	font-family: 'Lifehack-Medium';
+}
