@@ -1,0 +1,6 @@
+.carousel {
+  background-image: url("../img/bg_section-1.png");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  position: relative; }

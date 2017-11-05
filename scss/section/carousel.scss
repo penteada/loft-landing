@@ -1,0 +1,69 @@
+.carousel {
+  background-image: url('../img/burger_bg.png');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.carousel__content,
+.carousel__order-block {
+  display: flex;
+}
+
+.carousel__item--icon-box {
+  width: 5.6rem;
+  height: 5.6rem;
+  background-color: #f08c33;
+  border-radius: 4px;
+  position: relative;
+}
+.carousel__item--icon-top {
+  bottom: 10%;
+  left: 26%;
+  position: absolute;
+}
+.carousel__item--icon-name {
+  color: $white;
+  text-transform: uppercase;
+  @include gagalin();
+  font-size: .8rem;
+  position: absolute;
+  bottom: 10%;
+  left: 27%;
+}
+.carousel__burger-black {
+  opacity: 0;
+}
+.carousel__item--burger {
+  background-image: url('../img/black_burger.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 28rem;
+}
+.carousel__left, .carousel__right {
+  width: 47%;
+}
+.carousel__right {
+  margin-left: 1.5rem;
+}
+.carousel__item--description {
+  color: $white;
+  @include ubuntu(light);
+  font-size: .8rem;
+  line-height: 1.6rem;
+}
+.carousel__item--price  {
+  color: $redorange;
+  font-size: 1.8rem;
+  @include gagalin();
+}
+.carousel__item--number  {
+  color: $redorange;
+  font-size: 4.5rem;
+  @include gagalin();
+  margin-top: 5.6rem;
+}
+.carousel__btn {
+ margin: 3rem 0 0 1.9rem;
+}

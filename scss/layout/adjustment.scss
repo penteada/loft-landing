@@ -9,10 +9,28 @@
 .order__btn {
   background-color: $redorange;
   border-radius: 4px;
-  font-family: 'ubuntu', arial;
+  @include ubuntu (medium);
   font-size: .8rem;
-  font-weight: 400;
   color: $white;
-  padding: 12px 18px;
+  padding: 0 1rem;
   text-transform: uppercase;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+}
+
+.section__header {
+  margin-top: 4.8rem;
+  font-size: 4.5rem;
+  @include gagalin();
+}
+
+.header-gray {
+  color: $gray;
+}
+.header-orange {
+  color: $orange;
+}
+.header-white {
+  color: $white;
 }

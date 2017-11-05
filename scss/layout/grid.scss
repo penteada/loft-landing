@@ -46,7 +46,7 @@ footer {
 .section {
   min-height: 650px;
 
-  &_centered {
+  &__centered {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,18 +66,4 @@ footer {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-}
-
-.header,
-.intro__content {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 5px 0 0 0;
-}
-
-.intro__burger,
-.intro__header,  {
-width: 50%;
 }

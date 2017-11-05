@@ -23,7 +23,7 @@
   vertical-align: middle;
   white-space: nowrap;
   color: $white;
-
+  padding-top: .6rem;
   &::after {
     content: '●';
     margin: 0 12px;
@@ -43,6 +43,10 @@
   color: $white;
 
 }
+.header__menu,
+.header__btn {
+  margin-top: 1.7rem;
+}
 .intro__burger--img {
   opacity: 0;
 }
@@ -52,24 +56,24 @@
   background-size: cover;
 }
 
-.intro__slogan {
-  color: $orange;
-  font-size: 4.5rem;
-  @include gagalin();
+.intro__header {
+  margin-top: 6rem;
 }
 .intro__descrip {
   color: $white;
   @include lifehack();
   font-size: 4.06rem;
+  line-height: 3.6rem;
 }
 
-
-.header,
+.header  {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
 .intro__content {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
 }
 
 .intro__burger,

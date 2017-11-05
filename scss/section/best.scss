@@ -1,0 +1,31 @@
+.best {
+  background-image: url('../img/best_bg.png');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  position: relative;
+}
+.best__header {
+  margin-bottom: 0;
+}
+.best__item--name {
+  font-size: 1.5rem;
+  @include lifehack();
+}
+.best__item--description {
+  font-size: .8rem;
+  @include ubuntu(light);
+}
+
+.best__content {
+display: flex;
+}
+
+.best__item {
+  width: 30%;
+  text-align: center;
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}

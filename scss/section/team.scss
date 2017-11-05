@@ -1,0 +1,64 @@
+.team {
+  background-image: url('../img/team_bg.png');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.team__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba(#2f3234, .93);
+  padding-left: 4.3rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.1rem;
+}
+
+.team__member--trigger {
+  color: $white;
+  @include gagalin();
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border: 9px solid transparent;
+    border-top-color: $orange;
+    border-bottom-width: 0px;
+    margin-right: .6rem;
+  }
+}
+.team__member--content {
+  display: flex;
+}
+.team__member--text {
+  color: $white;
+}
+.team__member--image {
+  opacity: 0;
+}
+.team__member--avatar {
+  background-image: url('../img/team_mem.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team__member--position {
+  @include ubuntu(bold);
+  font-size: .8rem;
+}
+.team__member--about {
+  @include ubuntu(light);
+  font-size: .8rem;
+}
