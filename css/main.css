@@ -412,20 +412,22 @@ footer {
     margin-right: .6rem; }
 
 .team__member--content {
+  display: none; }
+
+.team__member--active {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  display: none; }
+  color: #f9b43b; }
+  .team__member--active::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border: 9px solid transparent;
+    border-bottom-color: #f9b43b;
+    border-top-width: 0;
+    margin-right: .6rem; }
 
 .team__member--text {
   color: #fff;

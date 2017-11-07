@@ -39,12 +39,21 @@
   }
 }
 .team__member--content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     display: none;
 }
-
+.team__member--active {
+  display: flex;
+  color: $orange;
+  &::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border: 9px solid transparent;
+    border-bottom-color: $orange;
+    border-top-width: 0;
+    margin-right: .6rem;
+  }
+}
 .team__member--text {
   color: $white;
   line-height: 1.5rem;
