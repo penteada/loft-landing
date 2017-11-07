@@ -19,6 +19,9 @@
   padding-top: 3.1rem;
 }
 
+.team__member {
+  margin-bottom: 2rem;
+}
 .team__member--trigger {
   color: $white;
   @include gagalin();
@@ -36,10 +39,17 @@
   }
 }
 .team__member--content {
-  display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
 }
+
 .team__member--text {
   color: $white;
+  line-height: 1.5rem;
+  width: 13rem;
+  margin-top: 1rem;
 }
 .team__member--image {
   opacity: 0;
@@ -53,6 +63,7 @@
   height: 6.25rem;
   border-radius: 50%;
   overflow: hidden;
+  margin: 1.2rem;
 }
 .team__member--position {
   @include ubuntu(bold);

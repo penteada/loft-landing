@@ -60,13 +60,13 @@
   font-size: 4.5rem;
   font-family: 'Gagalin-Regular', Arial, sans-serif; }
 
-.header-gray {
+.section__header--gray {
   color: #2f3234; }
 
-.header-orange {
+.section__header--orange {
   color: #f9b43b; }
 
-.header-white {
+.section__header--white {
   color: #fff; }
 
 h1,
@@ -108,6 +108,7 @@ footer {
   overflow: hidden; }
 
 .section {
+  height: 100vh;
   min-height: 650px; }
   .section__centered {
     display: -webkit-box;
@@ -288,12 +289,20 @@ footer {
   background-size: cover;
   position: relative; }
 
+.switch-arrow__left {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg); }
+
 .carousel__content,
 .carousel__order-block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-top: 2rem; }
 
 .carousel__item--icon-box {
   width: 5.6rem;
@@ -329,7 +338,7 @@ footer {
   width: 47%; }
 
 .carousel__right {
-  margin-left: 1.5rem; }
+  margin-left: 1.3rem; }
 
 .carousel__item--description {
   color: #fff;
@@ -378,6 +387,9 @@ footer {
   flex-direction: column;
   padding-top: 3.1rem; }
 
+.team__member {
+  margin-bottom: 2rem; }
+
 .team__member--trigger {
   color: #fff;
   font-family: 'Gagalin-Regular', Arial, sans-serif;
@@ -403,10 +415,23 @@ footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: none; }
 
 .team__member--text {
-  color: #fff; }
+  color: #fff;
+  line-height: 1.5rem;
+  width: 13rem;
+  margin-top: 1rem; }
 
 .team__member--image {
   opacity: 0; }
@@ -419,7 +444,8 @@ footer {
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 1.2rem; }
 
 .team__member--position {
   font-family: 'Ubuntu', Arial, sans-serif;

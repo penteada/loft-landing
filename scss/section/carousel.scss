@@ -5,10 +5,16 @@
   background-size: cover;
   position: relative;
 }
-
+.switch-arrow__left {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: rotateX(90deg);
+}
 .carousel__content,
 .carousel__order-block {
   display: flex;
+  margin-top: 2rem;
 }
 
 .carousel__item--icon-box {
@@ -45,7 +51,7 @@
   width: 47%;
 }
 .carousel__right {
-  margin-left: 1.5rem;
+  margin-left: 1.3rem;
 }
 .carousel__item--description {
   color: $white;

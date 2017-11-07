@@ -25,12 +25,12 @@
   @include gagalin();
 }
 
-.header-gray {
+.section__header--gray {
   color: $gray;
 }
-.header-orange {
+.section__header--orange {
   color: $orange;
 }
-.header-white {
+.section__header--white {
   color: $white;
 }
