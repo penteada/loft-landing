@@ -9,11 +9,11 @@
 
 
 .header__logo {
-/*  background-image: url('../img/logo.svg');
+  background-image: url('../img/logo.svg');
   background-repeat: no-repeat;
-  background-size: cover; */
-  width: 90px;
-  height: 75px;
+  background-size: cover;
+  width: 6.4rem;
+  height: 4.8rem;
   margin-right: auto;
 }
 
@@ -23,13 +23,13 @@
   vertical-align: middle;
   white-space: nowrap;
   color: $white;
-  padding-top: .6rem;
+  padding-top: .5rem;
   &::after {
     content: '●';
-    margin: 0 12px;
+    margin: 0 .75rem;
   }
   &:last-child {
-    margin-right: 14px;
+    margin-right: .87rem;
   }
   &:last-child::after {
   display: none;
@@ -45,19 +45,50 @@
 }
 .header__menu,
 .header__btn {
-  margin-top: 1.7rem;
+  margin-top: .3rem;
 }
+
+.menu {
+  @include tablet {
+    display: none;
+  };
+}
+
+.hamburger-menu-link {
+  display: none;
+  @include tablet {
+    display: flex;
+    margin: .7em 0 0 1.3em;
+    background-image: url("../img/hamburger.svg");
+    top: .8rem;
+    left: rem(10px);
+    width: 33px;
+    height: 27px;
+    svg {
+      max-width: 95%;
+    }
+  }
+}
+
 .intro__burger--img {
   opacity: 0;
 }
 .intro__burger {
   background-image: url('../img/burger.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  justify-content: center;
+  @include tablet {
+    width: rem(500px);
+    margin: 0 auto;
+  }
 }
 
 .intro__header {
   margin-top: 6rem;
+  @include tablet {
+    margin: 0 auto;
+  }
 }
 .intro__descrip {
   color: $white;
@@ -68,12 +99,20 @@
 
 .header  {
   display: flex;
-  flex-flow: row wrap;
-  width: 100%;
+  margin-top: .3rem;
+  min-width: 100%;
 }
 .intro__content {
-  width: 100%;
   display: flex;
+  width: 95%;
+  max-width: 940px;
+  @include tablet {
+    width: 95vw;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10% 10% 10%;
+  }
 }
 
 .intro__burger,
@@ -85,11 +124,17 @@
 }
 
 .header__arrow {
-  width: 36px;
-  height: 20px;
+  width: rem(36px);
+  height: rem(20px);
   bottom: 0;
   left: 50%;
   position: absolute;
   margin: 0 auto;
-
+  &:hover {
+    width: rem(37px);
+    height: rem(21px);
+  }
+  svg {
+    max-width: 95%;
+  }
 }

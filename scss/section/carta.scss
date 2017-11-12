@@ -1,0 +1,23 @@
+.carta  {
+  background-image: url('../img/menu_bg.png');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+}
+
+.carta__name {
+  color: $white;
+  @include gagalin();
+  font-size: rem(40px);
+  transform: rotate(270deg);
+  text-decoration: none;
+
+}
+
+.carta__content {
+  color: $white;
+  @include ubuntu(lighter);
+  font-size: rem(14px);
+  display: none;
+
+}

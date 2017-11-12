@@ -1,14 +1,17 @@
 //COLORS
 $orange: #f9b43b;
 $white: #fff;
+$black: #000;
 $gray: #2f3234;
 $redorange: #e35028;
+$darkorange: darken($redorange, 10%);
+$lightorange: lighten($orange, 10%);
 
 // config
 @import "config/mixins";
 @import "config/font";
 // base
-
+@import "layout/media";
 @import "layout/adjustment";
 @import "layout/grid";
 
@@ -18,3 +21,5 @@ $redorange: #e35028;
 @import "section/best";
 @import "section/carousel";
 @import "section/team";
+@import "section/carta";
+@import "section/review";

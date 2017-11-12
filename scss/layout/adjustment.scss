@@ -1,9 +1,9 @@
-.section-scroll {
+.content__scroll {
   position: fixed;
   top: 2rem;
   right: 1rem;
   color: $white;
-  z-index: 10;
+  list-style: circle;
 }
 
 .order__btn {
@@ -17,6 +17,9 @@
   height: 2.5rem;
   outline: none;
   border: none;
+  &:hover{
+    background-color: $darkorange;
+  }
 }
 
 .section__header {

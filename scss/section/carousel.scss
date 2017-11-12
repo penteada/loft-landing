@@ -7,16 +7,49 @@
 }
 .switch-arrow__left {
   position: absolute;
-  top: 0;
-  left: 1rem;
-  transform: rotateX(90deg);
+  width: rem(36px);
+  height: rem(20px);
+  top: 50%;
+  left: -4rem;
+  transform: rotate(90deg);
+  svg {
+    max-width: 95%;
+  }
 }
+
+.switch-arrow__right {
+  position: absolute;
+  width: rem(36px);
+  height: rem(20px);
+  top: 56%;
+  right: -4rem;
+  transform: rotate(270deg);
+  svg {
+    max-width: 95%;
+  }
+}
+
 .carousel__content,
 .carousel__order-block {
   display: flex;
   margin-top: 2rem;
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
-
+.carousel__item--header {
+  @include tablet {
+    display: flex;
+    width: 100%;
+    padding: 0 15%;
+    text-align: center;
+    margin: rem(40px) 0 rem(33px) 0;
+  }
+  @include mobile {
+    padding: 0;
+  }
+}
 .carousel__item--icon-box {
   width: 5.6rem;
   height: 5.6rem;
@@ -24,10 +57,15 @@
   border-radius: 4px;
   position: relative;
 }
-.carousel__item--icon-top {
-  bottom: 10%;
-  left: 26%;
+.carousel__item--icon-burger {
+  top: 10%;
+  left: -118%;
   position: absolute;
+  @include tablet {
+    position: absolute;
+    bottom: 10%;
+    left: -127%;
+  }
 }
 .carousel__item--icon-name {
   color: $white;
@@ -37,8 +75,51 @@
   position: absolute;
   bottom: 10%;
   left: 27%;
+  @include tablet {
+    position: absolute;
+    bottom: 10%;
+    left: 28%;
+  }
 }
-.carousel__burger-black {
+
+.carousel__item--icon-kkal {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  @include tablet {
+    top: 2%;
+    left: 70%;
+  }
+}
+.carousel__item--icon-qty,
+.carousel__item--icon-text {
+  color: $lightorange;
+  text-transform: uppercase;
+  @include gagalin();
+  font-size: .9rem;
+}
+.carousel__item--icon-qty {
+  position: absolute;
+  bottom: rem(10px);
+  left: rem(139px);
+  @include tablet {
+    position: absolute;
+    top: 5%;
+    left: rem(148px);
+  }
+}
+.carousel__item--icon-text {
+  position: absolute;
+  top: 0;
+  left: rem(135px);
+  @include tablet {
+    position: absolute;
+    top: 8%;
+    left: rem(146px);
+  }
+}
+
+.carousel__burger-black-image {
   opacity: 0;
 }
 .carousel__item--burger {
@@ -46,9 +127,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 28rem;
+  @include tablet {
+    background-size: cover;
+    padding: 0;
+    margin: 0 auto;
+    width: 31rem;
+  }
 }
 .carousel__left, .carousel__right {
   width: 47%;
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  @include mobile {
+    flex-direction: column;
+    width: 95%;
+  }
 }
 .carousel__right {
   margin-left: 1.3rem;
@@ -58,6 +154,11 @@
   @include ubuntu(light);
   font-size: .8rem;
   line-height: 1.6rem;
+  @include tablet {
+    width: 100%;
+    text-align: center;
+    padding: 0 15%;
+  }
 }
 .carousel__item--price  {
   color: $redorange;
@@ -72,4 +173,17 @@
 }
 .carousel__btn {
  margin: 3rem 0 0 1.9rem;
+ @include tablet {
+   width: rem(94px);
+ }
+}
+
+.carousel__order-block {
+  @include tablet {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  padding: 0 25%;
+  }
 }

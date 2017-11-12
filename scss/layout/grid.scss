@@ -36,35 +36,58 @@ footer {
   box-sizing: border-box;
 }
 //main grid
+html {
+  @include tablet {
+    font-size: rem(15px);
+  }
+
+  @include mobile {
+    font-size: rem(13px);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: rem(16px);
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  @include ubuntu();
+  color: $black;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 98%;
+  max-width: 940px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
-.section {
-  height: 100vh;
-  min-height: 650px;
 
+.section {
+  height: 100%;
+  min-height: 100vh;
   &__centered {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
   }
 }
 
 .content {
   height: 100%;
-  min-height: 650px;
-}
-
-.container {
-  width: 940px;
-  margin: 0 auto;
+  min-height: 100vh;
   position: relative;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
 }
