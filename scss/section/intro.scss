@@ -82,6 +82,10 @@
     width: rem(500px);
     margin: 0 auto;
   }
+  @include mobile {
+    margin: 0 auto;
+    padding-left: 0;
+  }
 }
 
 .intro__header {

@@ -245,6 +245,10 @@ body {
     .intro__burger {
       width: 31.25rem;
       margin: 0 auto; } }
+  @media screen and (max-width: 480px) {
+    .intro__burger {
+      margin: 0 auto;
+      padding-left: 0; } }
 
 .intro__header {
   margin-top: 6rem; }
@@ -799,5 +803,31 @@ body {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 0.875rem;
   display: none; }
+
+.review__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap; }
+
+.review__item {
+  width: 25%;
+  height: 50%; }
+
+.review__photo {
+  background-image: url("../img/ava-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+.review__photo--img {
+  opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,18 @@
+.review__list {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+.review__item {
+  width: 25%;
+  height: 50%;
+}
+.review__photo {
+  background-image: url('../img/ava-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.review__photo--img {
+  opacity: 0;
+}
